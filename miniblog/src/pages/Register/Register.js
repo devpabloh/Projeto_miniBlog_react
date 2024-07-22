@@ -45,24 +45,29 @@ const Register = () => {
         <h1>Cadastre-se para postar</h1>
         <p>Crie seu usuário e compartilhe suas histórias</p>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="">
+          <label>
             <span>Nome:</span>
             <input type="text" name="displayName" required placeholder="Nome do usuário" value={displayName} onChange={(e)=>setDisplayName(e.target.value)}/>
           </label>
-          <label htmlFor="">
+          <label>
             <span>E-mail:</span>
             <input type="email" name="email" required placeholder="E-mail do usuário" value={email} onChange={(e)=>setEmail(e.target.value)} />
           </label>
-          <label htmlFor="">
+          <label>
             <span>Senha:</span>
             <input type="password" name="password" required placeholder="Insira sua senha" value={password} onChange={(e)=>setPassword(e.target.value)}/>
           </label>
-          <label htmlFor="">
-            <span>Senha:</span>
+          <label>
+            <span>Confirmação de senha:</span>
             <input type="password" name="confirmPassword" required placeholder="Confirme a sua senha" value={confirmPassword} onChange={(e)=>setConfirmPassword(e.target.value)} />
           </label>
-          <button className="btn">Cadastrar</button>
-          {error && <p className="error">{error}</p>}
+          {!loading && <button className="btn">Entrar</button>}
+        {loading && (
+          <button className="btn" disabled>
+            Aguarde...
+          </button>
+        )}
+        {error && <p className="error">{error}</p>}
         </form>
     </div>
   )
