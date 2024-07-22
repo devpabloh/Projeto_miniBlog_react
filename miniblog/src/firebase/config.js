@@ -1,22 +1,18 @@
 
 import { initializeApp } from "firebase/app";
-
-//importando e chamando o banco de dados
-import {getFireStore} from "firebase/firebase";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDoOYA2cuDy7hK1R-UDF3j_6DPtjbeHlV4",
-  authDomain: "miniblog-6011c.firebaseapp.com",
-  projectId: "miniblog-6011c",
-  storageBucket: "miniblog-6011c.appspot.com",
-  messagingSenderId: "473377532877",
-  appId: "1:473377532877:web:e1c418830bb7fe019ff284"
+  apiKey: "AIzaSyCLvEGhcQo1QjbHP-0D7bRaKrFAaGQW_sg",
+  authDomain: "miniblog-ref.firebaseapp.com",
+  projectId: "miniblog-ref",
+  storageBucket: "miniblog-ref.appspot.com",
+  messagingSenderId: "411532945241",
+  appId: "1:411532945241:web:3808bd6c6bf5b1fb774e48",
 };
-
 
 const app = initializeApp(firebaseConfig);
 
-// Inicializando o banco de dados que é aonde vamos salvar os dados
-const db = getFireStore(app);
+const db = getFirestore(app);
 
-export {db};
+export { db };
