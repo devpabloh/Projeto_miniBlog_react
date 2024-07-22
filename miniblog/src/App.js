@@ -17,7 +17,7 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
-import Createpost from './pages/Createpost/Creatpost';
+import Createpost from './pages/Createpost/Createpost';
 import Dashboard from './pages/Dashboard/Dashboard';
 
 /* Components */
@@ -53,8 +53,8 @@ function App() {
             <Route path='/about' element={<About/>}/>
             <Route path='/login' element={<Login/>}/>
             <Route path='/register' element={<Register/>}/>
-            <Route path='/posts/create' element={<Createpost/>}/>
-            <Route path='/Dashboard' element={<Dashboard/>}/>
+            <Route path='/post/Createpost' element={<Createpost/>}/>
+            <Route path='/dashboard' element={<Dashboard/>}/>
           </Routes>
         </div>
         <Footer/>

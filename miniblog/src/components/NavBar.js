@@ -23,6 +23,12 @@ const NavBar = () => {
               <li><NavLink to="/register" className={({isActive})=> (isActive ? styles.active : "")}>Cadastrar</NavLink></li>
               </>
             )}
+            {user &&(
+              <>
+              <li><NavLink to="/post/Createpost" className={({isActive}) =>(isActive ? styles.active: "")}>Novo post</NavLink></li>
+              <li><NavLink to="/dashboard" className={({isActive})=> (isActive ? styles.active : "")}>Dashboard</NavLink></li>
+              </>
+            )}
             <li><NavLink to="/about" className={({isActive})=> (isActive ? styles.active : "")}>Sobre</NavLink></li>
         </ul>
     </nav>

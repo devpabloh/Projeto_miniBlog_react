@@ -2,7 +2,9 @@ import styles from "../Createpost/Createpost.module.css"
 
 const Createpost = () => {
   return (
-    <div>Creatpost</div>
+    <div>
+        <h1>Creatpost</h1>
+    </div>
   )
 }
 
