@@ -1,4 +1,4 @@
-import styles from "./Createpost.module.css";
+import styles from "../Createpost/Createpost.module.css";
 
 import { useState } from "react";
 import { useInsertDocument } from "../../hooks/useInsertDocument";
@@ -43,7 +43,7 @@ const CreatePost = () => {
       title,
       image,
       body,
-      tagsArray,
+      tags: tagsArray,
       uid: user.uid,
       createdBy: user.displayName,
     });
@@ -117,8 +117,9 @@ const CreatePost = () => {
             Aguarde.. .
           </button>
         )}
-        {response.error && <p className="error">{response.error}</p>}
-        {formError && <p className="error">{formError} </p>}
+        {(response.error || formError) && (
+          <p className="error">{response.error || formError}</p>
+        )}
       </form>
     </div>
   );
