@@ -15,14 +15,14 @@ import { AuthProvider } from './context/AuthContext';
 // pages
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
-import Login from './pages/Login/Login';
-import Register from './pages/Register/Register';
-import Createpost from './pages/Createpost/Createpost';
-import Dashboard from './pages/Dashboard/Dashboard';
 
 /* Components */
-import NavBar from "./components/NavBar"
+import NavBar from "./components/NavBar";
 import Footer from './components/Footer';
+import Createpost from './pages/Createpost/Createpost';
+import Login from './pages/Login/Login';
+import Register from './pages/Register/Register';
+import Dashboard from './pages/Dashboard/Dashboard';
 
 
 function App() {
@@ -30,11 +30,11 @@ function App() {
   const [user, setUser] = useState(undefined);
   const {auth} = useAuthentication();
 
-  const loadingUser = user === undefined
+  const loadingUser = user === undefined;
 
   useEffect(()=>{
     onAuthStateChanged(auth, (user)=>{
-      setUser(user)
+      setUser(user);
     })
   }, [auth])
 
@@ -53,7 +53,7 @@ function App() {
             <Route path='/about' element={<About/>}/>
             <Route path='/login' element={!user? <Login/> : <Navigate to='/'/>}/>
             <Route path='/register' element={!user? <Register/>:<Navigate to='/'/>}/>
-            <Route path='/post/Createpost' element={user ? <Createpost/>: <Navigate to='/login'/>}/>
+            <Route path='/posts/Createpost' element={user ? <Createpost/>: <Navigate to='/login'/>}/>
             <Route path='/dashboard' element={user ? <Dashboard/> : <Navigate to='/login'/>}/>
           </Routes>
         </div>
