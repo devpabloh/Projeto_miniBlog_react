@@ -16,18 +16,23 @@ import { AuthProvider } from './context/AuthContext';
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Search from './pages/Search/Search';
+<<<<<<< HEAD
 import Createpost from './pages/Createpost/Createpost';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import Dashboard from './pages/Dashboard/Dashboard';
 import Post from "./pages/Post/Post";
 
+=======
+>>>>>>> parent of 8961ebf (está funcioando)
 
 /* Components */
 import NavBar from "./components/NavBar";
 import Footer from './components/Footer';
-
-
+import Createpost from './pages/Createpost/Createpost';
+import Login from './pages/Login/Login';
+import Register from './pages/Register/Register';
+import Dashboard from './pages/Dashboard/Dashboard';
 
 
 

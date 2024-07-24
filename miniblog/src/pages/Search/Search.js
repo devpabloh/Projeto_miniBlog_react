@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import styles from "../Search/Search.module.css"
 
 // hooks
@@ -8,6 +9,9 @@ import { useQuery } from '../../hooks/useQuery';
 import PostDetail from '../../components/PostDetail';
 
 import { Link } from 'react-router-dom';
+=======
+import React from 'react'
+>>>>>>> parent of 8961ebf (está funcioando)
 
 const Search = () => {
   const query = useQuery();
@@ -16,6 +20,7 @@ const Search = () => {
   const {documents: posts} = useFetchDocuments("posts", search)
 
   return (
+<<<<<<< HEAD
     <div className={styles.search_container}>
       <h1>Resultados encontrados para: {search}</h1>
       <div className="post-list">
@@ -32,5 +37,10 @@ const Search = () => {
     </div>
   );
 };
+=======
+    <div>Search</div>
+  )
+}
+>>>>>>> parent of 8961ebf (está funcioando)
 
 export default Search
