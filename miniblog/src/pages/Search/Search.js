@@ -1,8 +1,14 @@
-import React from 'react'
+import React from 'react';
+
+// hooks
+import { useFetchDocuments } from '../../hooks/useFetchDocuments';
 
 const Search = () => {
   return (
-    <div>Search</div>
+    <div>
+        <h2>Search</h2>
+        <p>{Search}</p>
+    </div>
   )
 }
 
