@@ -1,7 +1,7 @@
 /* CSS componetizado */
 import styles from "../Home/Home.module.css";
 
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, Navigate } from "react-router-dom";
 
 import { useState } from "react";
 import { useFetchDocuments } from "../../hooks/useFetchDocuments";
@@ -13,6 +13,10 @@ const Home = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+
+    if(query){
+      return Navigate(`/search?q=${query}`);
+    }
   }
 
   return (  
